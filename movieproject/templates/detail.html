@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{mov.img.url}}" width="300" height="230">
+        </div>
+        <div class="col-md-4">
+            <h2 style="color: black; font-family:times">
+                {{mov.name}}
+            </h2>
+            <h5 style="color: blue; font-family:times; text-align: justify;">
+                {{mov.des}}
+            </h5>
+            <h5 style="color: blue; font-family:times">
+                The movie was released in {{mov.year}}
+            </h5>
+            <a class="btn btn-info" href="{% url 'movieapp:update' mov.id  %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'movieapp:delete' mov.id  %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
