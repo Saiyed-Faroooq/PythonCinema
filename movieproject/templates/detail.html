@@ -1,22 +1,26 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{{mov.img.url}}" width="300" height="230">
+    <div class="card-container">
+        <div class="card">
+            <img src="{{mov.img.url}}" alt="Image not found">
         </div>
-        <div class="col-md-4">
-            <h2 style="color: black; font-family:times">
+        <div class="card-body2">
+            <h2 class="card-title">
                 {{mov.name}}
             </h2>
-            <h5 style="color: blue; font-family:times; text-align: justify;">
+            <h5 class="card-text">
                 {{mov.des}}
             </h5>
-            <h5 style="color: blue; font-family:times">
+            <h5 class="card-text">
                 The movie was released in {{mov.year}}
             </h5>
-            <a class="btn btn-info" href="{% url 'movieapp:update' mov.id  %}">Update</a>
-            <a class="btn btn-danger" href="{% url 'movieapp:delete' mov.id  %}">Delete</a>
+            <br>
+            <a class="button" href="{% url 'movieapp:update' mov.id  %}">Update</a>
+            <a class="button" style="background-color: #ff0000;"
+               onmouseover="this.style.backgroundColor='#800000';"
+               onmouseout="this.style.backgroundColor='#ff0000';"
+               href="{% url 'movieapp:delete' mov.id  %}">Delete</a>
         </div>
     </div>
 </div>

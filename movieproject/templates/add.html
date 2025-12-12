@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" class="form-control" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="text" name="name" placeholder="Enter the movie name"><br>
-    <input type="text" name="des" placeholder="Enter movie description"><br>
-    <input type="number" name="year" placeholder="Enter the movie year"><br>
-    <input type="file" name="img"><br>
-    <input type="submit" value="Submit"><br>
+    <input class="field" style="margin-top: 8px;" type="text" name="name" placeholder="Enter the movie name"><br>
+    <input class="field" type="text" name="des" placeholder="Enter movie description"><br>
+    <input class="field" type="number" name="year" placeholder="Enter the movie year"><br>
+    <input class="field" type="file" name="img"><br>
+    <input class="fm-button" style="margin-left: 6px;" type="submit" value="Submit"><br>
 </form>
 {% endblock %}

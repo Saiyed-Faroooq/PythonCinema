@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block body %}
-<form method="post" enctype="multipart/form-data">
+<form method="post" class="form-control" enctype="multipart/form-data">
     {% csrf_token %}
 
     {{fmfetch.as_p}}<br>
-    <input type="submit" value="Submit">
+    <input class="fm-button" type="submit" value="Submit">
 </form>
 {% endblock %}

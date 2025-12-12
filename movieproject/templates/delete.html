@@ -3,8 +3,9 @@
 <form method="post">
     {% csrf_token %}
 
-    <h4>Are you sure to delete this movie?</h4>
-    <input type="submit" value="YES">
-
+    <h2 style="margin: 5px;">Are you sure to delete this movie?</h2>
+    <br>
+    <input class="buttonYes" type="submit" value="YES">
+    <a class="buttonNo" href="{% url 'movieapp:index' %}">NO</a>
 </form>
 {% endblock %}
